@@ -28,7 +28,7 @@ for (const button of callButtons) {
         const totalCoin = coinCount - 20
         document.getElementById("coin-count").innerText = totalCoin
 
-        const parent = e.target.parentNode.parentNode
+        const parent = e.target.closest(".card-container")
         const serviceName = parent.querySelector(".service-name").innerText
         const serviceNumber = parent.querySelector(".service-number").innerText
         const titleName = parent.querySelector(".title-name").innerText
@@ -51,13 +51,16 @@ document.getElementById("clear-button")
     .addEventListener("click", function () {
         const callHistoryContainer = document.getElementById("call-history")
         callHistoryContainer.innerHTML = " "
-    })
+    })    
+
+
+    // Copy Button
 const copyButtons = document.getElementsByClassName("copy-btn")
 for (const button of copyButtons){
     button.addEventListener("click", function(e){
         e.preventDefault()
 
-         const parent = e.target.parentNode.parentNode
+         const parent = e.target.closest(".card-container")
          const serviceNumber = parent.querySelector(".service-number").innerText
 
         navigator.clipboard.writeText(serviceNumber).then(() => {
