@@ -24,7 +24,6 @@ p.textContent = "Hello, I am a new paragraph.";
 // Add new element
 document.body.appendChild(p);
 
----
 
 ### What is Event Bubbling and how does it work?
 **Ans :** 
