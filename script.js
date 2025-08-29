@@ -37,7 +37,7 @@ for (const button of callButtons) {
         const callHistoryContainer = document.getElementById("call-history")
         const child = document.createElement("div")
         child.innerHTML = `
-        <div class = "flex justify-between items-center px-5">
+        <div class = "bg-[#f2eeee] flex justify-between items-center mx-5 rounded-2xl mb-3 px-2 py-2">
               <h3> <span class = "font-bold">${titleName}</span> <br> ${serviceNumber}</h3>
             <div>
               <p>${new Date().toLocaleTimeString()}</P>
