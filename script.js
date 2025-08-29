@@ -21,7 +21,7 @@ for (const button of callButtons) {
         const coinCount = parseInt(document.getElementById("coin-count").innerText)
 
         if (coinCount < 20) {
-            alert("You don't have enough coins!")
+            alert("You don’t have enough coins! You need at least 20 coins to make a call.")
             return;
         }
 
@@ -31,26 +31,48 @@ for (const button of callButtons) {
         const parent = e.target.parentNode.parentNode
         const serviceName = parent.querySelector(".service-name").innerText
         const serviceNumber = parent.querySelector(".service-number").innerText
+        const titleName = parent.querySelector(".title-name").innerText
         alert("Calling " + serviceName + " " + serviceNumber)
 
         const callHistoryContainer = document.getElementById("call-history")
         const child = document.createElement("div")
         child.innerHTML = `
         <div class = "flex justify-between items-center px-5">
-              <h3> <span class = "font-bold">${serviceName}</span> <br> ${serviceNumber}</h3>
+              <h3> <span class = "font-bold">${titleName}</span> <br> ${serviceNumber}</h3>
             <div>
               <p>${new Date().toLocaleTimeString()}</P>
             </div>
         </div>`
         callHistoryContainer.appendChild(child)
-
-        document.getElementById("clear-button")
-        .addEventListener("click", function(){
-            const callHistoryContainer = document.getElementById("call-history")
-            callHistoryContainer.innerHTML = " "
-        })
     })
 }
+
+document.getElementById("clear-button")
+    .addEventListener("click", function () {
+        const callHistoryContainer = document.getElementById("call-history")
+        callHistoryContainer.innerHTML = " "
+    })
+const copyButtons = document.getElementsByClassName("copy-btn")
+for (const button of copyButtons){
+    button.addEventListener("click", function(e){
+        e.preventDefault()
+
+         const parent = e.target.parentNode.parentNode
+         const serviceNumber = parent.querySelector(".service-number").innerText
+
+        navigator.clipboard.writeText(serviceNumber).then(() => {
+            alert("Copied Successfully : " + serviceNumber)
+
+        const copyCount = parseInt(document.getElementById("copy-count").innerText)
+        document.getElementById("copy-count").innerText = copyCount + 1
+
+    })
+})
+}
+
+
+
+
 
 
 
