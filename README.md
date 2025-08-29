@@ -2,13 +2,13 @@
 
 **Ans:**  
 
-     1. When a specific element is needed, getElementById is used. It is determined by id.
+     * When a specific element is needed, getElementById is used. It is determined by id.
 
-     2. When several elements are needed together for a task, getElementsByClassName is used. It is determined by CSS class.
+     * When several elements are needed together for a task, getElementsByClassName is used. It is determined by CSS class.
 
-     3. When the first element is needed, querySelector is used. It is determined by CSS selector.
+     * When the first element is needed, querySelector is used. It is determined by CSS selector.
 
-     4. When all elements are needed, querySelectorAll is used. It is determined by CSS selector.
+     * When all elements are needed, querySelectorAll is used. It is determined by CSS selector.
 
 
 ### 2. How do you create and insert a new element into the DOM?
@@ -32,14 +32,14 @@ document.body.appendChild(p);
         and then gradually moves up to the parent elements.
 
 ### 4. What is Event Delegation in JavaScript? Why is it useful?
-**Ans :**   
+**Ans :**
         Event Delegation is a process where I use an event listener on a parent element, and the event can be handled 
         on its child elements.
 
 ### 5. What is the difference between preventDefault() and stopPropagation() methods?
-**Ans :** 
-      1. preventDefault() is a method that stops the default behavior of an event.
-      2. stopPropagation() is a method that prevents the event from bubbling to parent elements.
+**Ans :**  
+      * preventDefault() is a method that stops the default behavior of an event.  
+      * stopPropagation() is a method that prevents the event from bubbling to parent elements.
 
 
 
