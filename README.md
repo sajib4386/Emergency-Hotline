@@ -1,15 +1,15 @@
 ### What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
-**Ans:**
-1.When a specific element is needed, getElementById is used. It is determined by id.
+**Ans:**  
 
-2.When several elements are needed together for a task, getElementsByClassName is used. It is determined by CSS class.
+     1. When a specific element is needed, getElementById is used. It is determined by id.
 
-3.When the first element is needed, querySelector is used. It is determined by CSS selector.
+     2. When several elements are needed together for a task, getElementsByClassName is used. It is determined by CSS class.
 
-4.When all elements are needed, querySelectorAll is used. It is determined by CSS selector.
+     3. When the first element is needed, querySelector is used. It is determined by CSS selector.
 
----
+     4. When all elements are needed, querySelectorAll is used. It is determined by CSS selector.
+
 
 ### How do you create and insert a new element into the DOM?
 
@@ -24,6 +24,7 @@ p.textContent = "Hello, I am a new paragraph.";
 // Add new element
 document.body.appendChild(p);
 
+```
 
 ### What is Event Bubbling and how does it work?
 **Ans :** 
